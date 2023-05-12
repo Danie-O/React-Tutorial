@@ -11,10 +11,10 @@ function App() {
   }
 
   const [alertVisible, setAlertVisibility] = useState(false);
- 
+  
   return (
-    <div>
-      {alertVisible && <Alert>Congrats, you clicked 'Submit'</Alert>}
+      <div>
+        {alertVisible && <Alert onClose={() => setAlertVisibility(false)}>Yayyy, you clicked 'Submit'</Alert>}
         <Button onClick={() => setAlertVisibility(true)}>
           Submit
         </Button>
